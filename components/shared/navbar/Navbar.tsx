@@ -4,6 +4,7 @@ import React from "react";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Theme from "./Theme";
 import MobileNav from "./MobileNav";
+import GlobalSearch from "@/components/shared/search/GlobalSearch";
 
 function Navbar() {
   return (
@@ -19,7 +20,9 @@ function Navbar() {
           Already<span className="text-primary-500">Asked</span>
         </p>
       </Link>
-      Globalseach
+
+      <GlobalSearch />
+
       <div className="flex-between gap-5">
         <Theme />
         <SignedIn>
