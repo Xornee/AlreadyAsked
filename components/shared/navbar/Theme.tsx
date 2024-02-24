@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-
 import {
   Menubar,
   MenubarContent,
@@ -18,7 +17,7 @@ const Theme = () => {
   const { mode, setMode } = useThemeContext();
 
   return (
-    <Menubar className="relative border-none bg-transparent shadow-none">
+    <Menubar className="flex h-9 items-center space-x-1 rounded-md border border-slate-200 p-1 dark:border-slate-800 relative border-none bg-transparent shadow-none dark:bg-transparent">
       <MenubarMenu>
         <MenubarTrigger className="focus:bg-light-900 data-[state=open]:bg-light-900 dark:focus:bg-dark-200 dark:data-[state=open]:bg-dark-200">
           {mode === "light" ? (
