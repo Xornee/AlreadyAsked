@@ -71,3 +71,29 @@ export const BADGE_CRITERIA = {
     GOLD: 100000,
   },
 };
+
+// Custom for my needs
+
+export const SidebarQuestions = [
+  {
+    text: "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
+    question_url: "/question/64fa02046ce064be90efc42d",
+    id: 1,
+  },
+  {
+    text: "Is it only me or the font is bolder than necessary?",
+    question_url: "/question/64fa34346ce064be90efc42d",
+    id: 2,
+  },
+  {
+    text: "Redux Toolkit Not Updating State as Expected",
+    question_url: "/question/24dfd046ce064be90efc42d",
+    id: 3,
+  },
+];
+
+export const SidebarTags = [
+  { text: "NextJS", tag_url: "/tag/nextjs", number: 31, id: 1 },
+  { text: "React", tag_url: "/tag/react", number: 18, id: 2 },
+  { text: "CSS", tag_url: "/tag/css", number: 9, id: 3 },
+];
