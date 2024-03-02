@@ -20,6 +20,7 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 // import { createQuestion } from "@/lib/actions/question.action";
 import { useRouter, usePathname } from "next/navigation";
+import { createQuestion } from "@/lib/actions/question.action";
 
 const type: any = "create";
 
@@ -47,6 +48,15 @@ const Question = ({ mongoUserId }: Props) => {
   async function onSubmit(values: z.infer<typeof QuestionsSchema>) {
     setIsSubmitting(true);
 
+    try {
+      await createQuestion({}).then((res) => {
+        console.log(res);
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsSubmitting(false);
+    }
     // try {
     //   // make an async call to your API -> create a question
     //   // contain all form data

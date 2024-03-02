@@ -1,9 +1,11 @@
 "use server";
 
+import { connectToDatabase } from "../mongoose";
+
 export async function createQuestion(data: any) {
   try {
-    // :D we will do it next
+    connectToDatabase();
   } catch (err) {
-    // :D we will do it next
+    console.log(err);
   }
 }
