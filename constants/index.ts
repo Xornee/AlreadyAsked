@@ -93,7 +93,7 @@ export const SidebarQuestions = [
 ];
 
 export const SidebarTags = [
-  { text: "NextJS", tag_url: "/tag/nextjs", number: 31, id: 1 },
-  { text: "React", tag_url: "/tag/react", number: 18, id: 2 },
-  { text: "CSS", tag_url: "/tag/css", number: 9, id: 3 },
+  { text: "NextJS", tag_url: "/tag/nextjs", number: 31, id: "1" },
+  { text: "React", tag_url: "/tag/react", number: 18, id: "2" },
+  { text: "CSS", tag_url: "/tag/css", number: 9, id: "3" },
 ];
