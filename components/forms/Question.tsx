@@ -49,32 +49,23 @@ const Question = ({ mongoUserId }: Props) => {
     setIsSubmitting(true);
 
     try {
-      await createQuestion({}).then((res) => {
-        console.log(res);
+      // make an async call to your API -> create a question
+      // contain all form data
+
+      await createQuestion({
+        title: values.title,
+        content: values.explanation,
+        tags: values.tags,
+        author: JSON.parse(mongoUserId),
+        path: pathname,
       });
+
+      // navigate to home page
+      router.push("/");
     } catch (error) {
-      console.log(error);
     } finally {
       setIsSubmitting(false);
     }
-    // try {
-    //   // make an async call to your API -> create a question
-    //   // contain all form data
-
-    //   await createQuestion({
-    //     title: values.title,
-    //     content: values.explanation,
-    //     tags: values.tags,
-    //     author: JSON.parse(mongoUserId),
-    //     path: pathname,
-    //   });
-
-    //   // navigate to home page
-    //   router.push("/");
-    // } catch (error) {
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
   }
 
   const handleInputKeyDown = (

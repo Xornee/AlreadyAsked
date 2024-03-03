@@ -5,6 +5,7 @@ import NoResult from "@/components/shared/NoResult";
 import LocalSeach from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
+import { get } from "http";
 import Link from "next/link";
 
 const questions = [
@@ -44,7 +45,9 @@ const questions = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  // const result = await getQuestions();
+
   return (
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
